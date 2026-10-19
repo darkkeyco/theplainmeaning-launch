@@ -40,6 +40,22 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(36px,6.4vw,58px);l
 .event p{color:var(--snow)}
 .btn{align-self:flex-start;margin-top:8px;display:inline-block;background:var(--rhodo);color:var(--white);font-weight:700;text-decoration:none;padding:13px 22px;border-radius:999px;min-height:44px}
 .btn:hover{background:var(--white);color:var(--ink)}
+.series{padding:56px 0 8px;display:flex;flex-direction:column;gap:14px}
+.series h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.4vw,40px);line-height:1.08;text-wrap:balance}
+.dives{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:14px;counter-reset:dd}
+.dives li{counter-increment:dd;background:var(--white);border:1px solid var(--snow);border-radius:14px;padding:20px 22px 20px 64px;position:relative}
+.dives li::before{content:counter(dd);position:absolute;left:20px;top:18px;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);font-weight:700;font-size:14px;display:grid;place-items:center}
+.dives h3{font-family:var(--display);font-weight:800;font-size:21px;margin:0 0 4px}
+.dives .promise{font-weight:700;margin-bottom:6px}
+.dives p{font-size:16px}
+.dives p:not(.promise){color:var(--plum)}
+.signup{margin-top:12px;background:var(--hl);border-radius:16px;padding:22px 24px}
+.signup label{display:block;font-weight:700;margin-bottom:8px}
+.signup .row{display:flex;flex-wrap:wrap;gap:10px}
+.signup input{flex:1 1 240px;min-height:48px;border:2px solid var(--ink);border-radius:999px;padding:0 18px;font:inherit;background:var(--white)}
+.signup .btn{margin-top:0;border:0;cursor:pointer;font:inherit;font-weight:700}
+.signup .fine{font-size:14px;color:var(--ink);margin-top:10px}
+@media (max-width:520px){.dives li{padding:56px 18px 18px}.dives li::before{top:16px;left:18px}}
 .disclaimer{margin:40px 0;background:var(--white);border:2px solid var(--ink);border-radius:14px;padding:22px 24px}
 .disclaimer strong{display:block;font-family:var(--display);font-weight:800;font-size:20px;margin-bottom:6px}
 .disclaimer p{font-size:15.5px;color:var(--plum)}
@@ -64,6 +80,32 @@ footer{border-top:1px solid var(--snow);padding:22px 0 40px;font-size:14px;color
     <h2>The 10 Legal Must-Dos for New Businesses</h2>
     <p>One hour on Google Meet, part of the Legal Education Series with Calling to Clarity. The session is legal education only.</p>
     <a class="btn" href="https://callingtoclarity.com/webinars/legal-must-dos/">Save my seat</a>
+  </section>
+
+  <section class="series" id="deep-dives" aria-labelledby="dd-title">
+    <span class="eyebrow">The Plain Meaning Deep Dives · Dates coming</span>
+    <h2 id="dd-title">Eight live sessions for the legal questions that show up once clients do.</h2>
+    <p class="lede">Each one takes a topic from the Dec 1 training and goes an hour deeper, with real examples and the questions to ask before you sign or post. Legal education only.</p>
+
+    <ol class="dives">
+      <li><h3>Refunds and Cancellations</h3><p class="promise">Write a refund policy your sales page agrees with.</p><p>Most refund fights start when the sales page promises one thing and the policy says another. We'll read examples side by side, then go through what to decide before you write your own, from deadlines and payment plans to the session you have to cancel yourself.</p></li>
+      <li><h3>Testimonials and Income Claims</h3><p class="promise">Share your clients' results without promising everyone the same ones.</p><p>The FTC treats a testimonial you post as a claim you're making, and a "results not typical" line under it hasn't covered you since 2009. Learn what that means for your sales page and the screenshots in your stories.</p></li>
+      <li><h3>The Legal Pages Your Website Needs</h3><p class="promise">Know what your privacy policy and your terms are each for, before your list grows.</p><p>Your sign-up form collects personal information the moment it goes live. We'll walk through what each page does, where a disclaimer fits, what your form should say, and the consent checkbox people skip.</p></li>
+      <li><h3>Who Owns It?</h3><p class="promise">Know who owns the things you make and sell.</p><p>Templates, workbooks, recordings, and client deliverables each raise a different ownership question, and one line in a contract can change the answer. Learn the basics of copyright and licensing, and what to do when someone copies your work.</p></li>
+      <li><h3>Collab Agreements</h3><p class="promise">Put the money split and the exit in writing before you co-host anything.</p><p>Joint ventures, co-hosted launches, affiliate deals, and summit spots tend to run on a handshake until something goes wrong. We'll cover who owns the replay, whose email list it is, how the money gets split, and what happens when a partner drops out.</p></li>
+      <li><h3>Your Business Name</h3><p class="promise">Learn when a trademark matters and how your brand name and legal name fit together.</p><p>Plenty of small businesses end up with a brand name and an LLC name that don't match. Learn what a trademark search looks for, what ™ and ® mean, and the questions to ask before you print the logo.</p></li>
+      <li><h3>AI in Your Business</h3><p class="promise">Learn what to check before your work or your clients' information goes into an AI tool.</p><p>AI tools have terms of their own about what you put in and what comes out. We'll read a few of them in plain English, then talk about disclosure, who owns AI-assisted work, and the AI clauses showing up in service agreements.</p></li>
+      <li><h3>Your First Contractor</h3><p class="promise">Hire your first helper with an agreement that covers the work and who owns it.</p><p>Calling someone a contractor in the agreement is where people start, and the law looks at a lot more than the title. We'll go through the factors it weighs and what a basic contractor agreement should cover before day one.</p></li>
+    </ol>
+
+    <form class="signup" action="https://app.kit.com/forms/10069059/subscriptions" method="post">
+      <label for="email">Your email</label>
+      <div class="row">
+        <input id="email" type="email" name="email_address" autocomplete="email" required placeholder="you@yourbusiness.com">
+        <button class="btn" type="submit">Put me on the list</button>
+      </div>
+      <p class="fine">I'll email you when the dates are set. You'll get email from The Plain Meaning, and you can unsubscribe anytime. <a href="https://callingtoclarity.com/policies/#privacy">Privacy policy</a>.</p>
+    </form>
   </section>
 
   <section class="disclaimer" role="note" aria-label="Legal disclaimer">
