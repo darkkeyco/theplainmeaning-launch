@@ -414,3 +414,33 @@ body{padding-bottom:64px}
 
 .door__img{display:block;width:calc(100% + 64px);max-width:none;margin:-32px -32px 0;aspect-ratio:4/3;object-fit:cover;border-radius:28px 28px 0 0}
 @media (max-width:640px){.door__img{width:calc(100% + 48px);margin:-24px -24px 0}}
+
+/* Home hero: the desk window behind, the framed photo in front */
+.hero-x{position:relative;overflow:hidden;color:var(--paper);background:#15171a}
+.hero-x__bg{position:absolute;inset:-3%;background:url(../img/pm-04-hero.jpg) 60% center/cover;filter:grayscale(1) brightness(.8);animation:hx-color 3s ease-out .3s forwards,hx-drift 28s ease-in-out infinite alternate}
+.hero-x::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,19,22,.93) 0%,rgba(18,19,22,.8) 45%,rgba(18,19,22,.35) 100%)}
+.hero-x__inner{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:40px 56px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero-x__copy{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:22px;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.hero-x .h1{color:var(--paper)}
+.hero-x .lede{color:var(--snow)}
+.hero-x a:not(.btn){color:var(--paper)}
+.hero-x__photo{flex:1 1 340px;display:flex;justify-content:center}
+.hero-x__frame{width:380px;max-width:100%;aspect-ratio:4/5;border:2px solid var(--paper);border-radius:28px;overflow:hidden;background:var(--chiv);transform:rotate(-6deg);animation:hx-settle 1.6s cubic-bezier(.2,.8,.2,1) .4s forwards,hx-bob 9s ease-in-out 2.2s infinite}
+.hero-x__frame img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) brightness(.9);animation:hx-color 2.6s ease-out .6s forwards}
+.hero-x .rise{opacity:0;transform:translateY(14px);animation:hx-rise .8s ease-out forwards}
+.hero-x .d1{animation-delay:.2s}.hero-x .d2{animation-delay:.5s}.hero-x .d3{animation-delay:.9s}.hero-x .d4{animation-delay:1.3s}
+.hero-x .swipe{background:linear-gradient(var(--rhodo),var(--rhodo)) no-repeat 0 90%/0 .3em;animation:hx-swipe 1s ease-out 1.7s forwards}
+@keyframes hx-rise{to{opacity:1;transform:none}}
+@keyframes hx-swipe{to{background-size:100% .3em}}
+@keyframes hx-color{to{filter:grayscale(0) brightness(1)}}
+@keyframes hx-drift{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.09) translate(-1.5%,-1%)}}
+@keyframes hx-settle{to{transform:rotate(-2deg);box-shadow:14px 14px 0 var(--hl)}}
+@keyframes hx-bob{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-1.4deg) translateY(-7px)}}
+@media (max-width:640px){.hero-x__inner{padding-top:44px;padding-bottom:44px}.hero-x__frame{width:300px}}
+@media (prefers-reduced-motion:reduce){
+  .hero-x *,.hero-x__bg{animation:none!important}
+  .hero-x .rise{opacity:1;transform:none}
+  .hero-x .swipe{background-size:100% .3em}
+  .hero-x__bg,.hero-x__frame img{filter:none}
+  .hero-x__frame{transform:rotate(-2deg);box-shadow:14px 14px 0 var(--hl)}
+}
