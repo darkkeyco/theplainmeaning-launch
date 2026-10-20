@@ -463,3 +463,14 @@ body{padding-bottom:64px}
 .hero-x__sub{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.6vw,28px);line-height:1.15;letter-spacing:-.4px;color:var(--paper);margin:-6px 0 0}
 
 .hero-x .h1{text-wrap:balance}
+
+/* Big Dec 1 training ad on the home page */
+.webinar-ad{background:var(--iridium);color:var(--paper);padding:80px 0}
+.webinar-ad .wrap{display:flex;flex-wrap:wrap;gap:44px 60px;align-items:center}
+.webinar-ad__copy{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.webinar-ad__when{font-weight:800;font-size:clamp(18px,2.2vw,24px);color:var(--hl);letter-spacing:.2px}
+.webinar-ad h2{font-family:var(--display);font-weight:800;font-size:clamp(38px,5.2vw,64px);line-height:1.02;letter-spacing:-1.6px;text-wrap:balance}
+.webinar-ad p{color:var(--snow);font-size:19px;max-width:520px}
+.webinar-ad__photo{flex:1 1 380px;min-width:0}
+.webinar-ad__photo img{display:block;width:100%;height:auto;border-radius:24px;border:2px solid var(--paper);box-shadow:14px 14px 0 var(--rhodo)}
+@media (max-width:640px){.webinar-ad{padding:52px 0}}
