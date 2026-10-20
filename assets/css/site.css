@@ -459,3 +459,7 @@ body{padding-bottom:64px}
 .tile__img{display:block;width:calc(100% + 52px);max-width:none;margin:-26px -26px 0;aspect-ratio:16/10;object-fit:cover;border-radius:24px 24px 0 0}
 
 .hero-x__when{font-weight:700;font-size:15px;letter-spacing:.2px;color:var(--hl);margin-bottom:-8px}
+
+.hero-x__sub{font-family:var(--display);font-weight:800;font-size:clamp(20px,2.6vw,28px);line-height:1.15;letter-spacing:-.4px;color:var(--paper);margin:-6px 0 0}
+
+.hero-x .h1{text-wrap:balance}
