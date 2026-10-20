@@ -444,3 +444,14 @@ body{padding-bottom:64px}
   .hero-x__bg,.hero-x__frame img{filter:none}
   .hero-x__frame{transform:rotate(-2deg);box-shadow:14px 14px 0 var(--hl)}
 }
+
+/* About photo: swings in and turns to color as it scrolls into view (browsers without scroll-driven animation just show the finished frame) */
+@keyframes ab-settle{from{transform:rotate(-7deg);box-shadow:0 0 0 var(--hl)}to{transform:rotate(-2deg);box-shadow:14px 14px 0 var(--hl)}}
+@keyframes ab-color{from{filter:grayscale(1) brightness(.9)}to{filter:none}}
+@supports (animation-timeline: view()){
+  .about__photo{animation:ab-settle linear both;animation-timeline:view();animation-range:entry 0% entry 75%}
+  .about__photo img{animation:ab-color linear both;animation-timeline:view();animation-range:entry 10% entry 100%}
+}
+@media (prefers-reduced-motion:reduce){.about__photo,.about__photo img{animation:none!important}}
+
+.hero-x__copy{max-width:640px}
